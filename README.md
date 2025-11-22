@@ -10,3 +10,13 @@ Lightning fast Rust rewrite of https://github.com/Failzuma/JustAsPlanned (yes, 9
 5. Put `GameAssembly_patched.dll` to your Muse Dash directory and rename it to `GameAssembly.dll`
 
 also please star me and author of original thing, thanks :)
+
+# Building
+I'm using Linux (NixOS btw), so I don't know how to build on Windows, probably just run `cargo build --release`? Idk.
+
+From Linux to Linux: `cargo build --release`, then just look for `just_as_planned` in `target/release`
+From Linux to Windows: `cargo install cargo-xwin; rustup target add x86_64-pc-windows-msvc; cargo xwin build --release --target x86_64-pc-windows-msvc`, then just look for `just_as_planned.exe` in `target/x86_64-pc-windows-msvc/release/just_as_planned.exe`
+
+# To do
+1. Nix flake
+2. Patching macOS version of the game
